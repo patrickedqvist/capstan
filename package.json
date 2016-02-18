@@ -1,0 +1,28 @@
+{
+  "name": "capstan",
+  "version": "1.0.0",
+  "description": "WordPress theme for Capstan Companies",
+  "main": "index.php",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Patrick Edqvist",
+  "bugs": {
+    "url": "https://github.com/patrickedqvist/capstan/issues",
+    "email": "patrick.edqvist@gmail.com"
+  },
+  "private": true,
+  "license": "GPL-3.0",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/patrickedqvist/capstan.git"
+  },
+  "homepage": "https://github.com/patrickedqvist/capstan#readme",
+  "devDependencies": {
+    "gulp": "^3.9.1",
+    "gulp-autoprefixer": "^3.1.0",
+    "gulp-concat": "^2.6.0",
+    "gulp-cssnano": "^2.1.1",
+    "gulp-ruby-sass": "^2.0.6"
+  }
+}
