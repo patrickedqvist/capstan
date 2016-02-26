@@ -1,2 +1,210 @@
 @import "normalize";
 @import "grid";
+
+body {
+  font-family: 'Open Sans', helvetica, verdana, serif;
+  background: #fff;
+  color: rgba(0, 0, 0, 0.87);
+  padding: 0;
+  margin: 0;
+  font-weight: normal;
+  font-style: normal;
+  line-height: 1.5;
+}
+
+a {
+  color: #75b0cf;
+}
+
+h1, h2, h3, h4, h5 ,h6 {
+  font-family: Roboto, serif;
+}
+
+/* Blockqoute */
+
+blockquote {
+  margin: 0 auto;
+  padding: 1em;
+  background: #75b0cf;
+}
+
+blockquote p {
+  color: #fff;
+  font-size: 14px;
+  line-height: 20px;
+}
+
+/*----------------------------------------
+ # Screen reader class
+----------------------------------------*/
+.screen-reader-text {
+    clip: rect(1px, 1px, 1px, 1px);
+    position: absolute !important;
+    height: 1px;
+    width: 1px;
+    overflow: hidden;
+}
+
+/*----------------------------------------
+ # Nav Links (Paginate posts in loop)
+----------------------------------------*/
+.nav-links {
+  width: 100%;
+  clear: both;
+}
+
+.nav-links:before,
+.nav-links:after {
+  content: '';
+  display: table;
+}
+
+.nav-links:after {
+  clear: both;
+}
+
+.nav-links .page-numbers {
+  color: #fff;
+  padding: 6px 12px;
+  display: inline-block;
+  text-decoration: none;
+  background: rgba(0, 0, 0, 0.12);
+  color: rgba(0, 0, 0, 0.3);
+}
+
+.nav-links .page-numbers.current {
+  background: transparent;
+  border: 1px solid rgba(0, 0, 0, 0.12);
+}
+
+/*----------------------------------------
+ # Single Post & Page (Critical Part)
+----------------------------------------*/
+.single .entry-content,
+.page .entry-content {
+  width: 100%;
+  clear: both;
+}
+
+.single .entry-content p,
+.page .entry-content p {
+  margin-bottom: 25px;
+  font-size: 18px;
+  display: block;
+  line-height: 30px;
+  font-weight: 400;
+  padding-top: 15px;
+  padding-bottom: 5px;
+}
+
+@media screen and (min-width:768px) {
+  .single .entry-content {
+    max-width: 600px;
+    width: 100%;
+    clear: both;
+  }
+}
+
+/*----------------------------------------
+ # Galleries
+----------------------------------------*/
+.gallery {
+	margin: 0;
+}
+
+.gallery-item {
+	display: inline-block;
+	max-width: 33.33%;
+	padding: 5px;
+	text-align: center;
+	vertical-align: top;
+	width: 100%;
+  margin: 0;
+}
+
+.gallery-columns-1 .gallery-item {
+	max-width: 100%;
+}
+
+.gallery-columns-2 .gallery-item {
+	max-width: 50%;
+}
+
+.gallery-columns-4 .gallery-item {
+	max-width: 25%;
+}
+
+.gallery-columns-5 .gallery-item {
+	max-width: 20%;
+}
+
+.gallery-columns-6 .gallery-item {
+	max-width: 16.66%;
+}
+
+.gallery-columns-7 .gallery-item {
+	max-width: 14.28%;
+}
+
+.gallery-columns-8 .gallery-item {
+	max-width: 12.5%;
+}
+
+.gallery-columns-9 .gallery-item {
+	max-width: 11.11%;
+}
+
+.gallery-icon img {
+	margin: 0 auto;
+}
+
+.gallery-caption {
+	color: #686868;
+	display: block;
+	font-size: 13px;
+	font-size: 0.8125rem;
+	font-style: italic;
+	line-height: 1.6153846154;
+	padding-top: 0.5384615385em;
+}
+
+.gallery-columns-6 .gallery-caption,
+.gallery-columns-7 .gallery-caption,
+.gallery-columns-8 .gallery-caption,
+.gallery-columns-9 .gallery-caption {
+	display: none;
+}
+
+/*----------------------------------------
+ # WordPress Editor Classes
+----------------------------------------*/
+.alignleft {
+	float: left;
+  margin: 0 16px 8px 0;
+}
+
+.alignright {
+	float: right;
+}
+
+.aligncenter {
+	clear: both;
+	display: block;
+}
+
+/*----------------------------------------
+ # Site Footer
+----------------------------------------*/
+#site-footer {
+  margin: 0 auto;
+  padding: 38px 15px 32px;
+  max-width: 880px;
+  display: block;
+}
+
+#site-footer p {
+  font-size: 14px;
+  color: rgba(0, 0, 0, 0.54);
+  font-style: italic;
+  margin: 0;
+}

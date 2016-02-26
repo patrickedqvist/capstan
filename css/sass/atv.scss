@@ -1,7 +1,196 @@
 /*----------------------------------------
  # Above the fold Content
 ----------------------------------------*/
-.site-header {
+
+/* Banner */
+#banner {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  width: 150px;
+  height: 150px;
+  background: #75B0CF;
+  z-index: -1;
+  -webkit-clip-path: polygon(0 0, 0% 100%, 100% 0);
+  clip-path: polygon(0 0, 0% 100%, 100% 0);
+}
+
+@media screen and (min-width:768px) {
+  #banner {
+    width: 300px;
+    height: 300px;
+  }
+}
+
+/* clearfix */
+.clearfix:before,
+.clearfix:after {
+	content:"";
+	display: table ;
+	clear:both;
+}
+
+/*----------------------------------------
+ # Site header and Navigation
+----------------------------------------*/
+#site-header {
   margin: 0 auto 96px;
   padding: 32px 0 0;
+}
+
+.primary-nav ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.primary-nav ul .right {
+  float: right;
+}
+
+.primary-nav ul li {
+  display: inline-block;
+  padding: 1rem;
+}
+
+.primary-nav ul li a {
+  font-size: 1rem;
+  color: rgba(0, 0, 0, 0.54);
+  text-decoration: none;
+}
+
+.primary-nav ul li.current_page_item a {
+  color: rgba(0, 0, 0, 0.87);
+}
+
+.primary-nav ul li a:after {
+  width: 0;
+  background-color: #75b0cf;
+  display: block;
+  height: 1px;
+  content: "";
+  transition: width 0.2s ease-in-out;
+  margin: 0 auto;
+}
+
+.primary-nav ul li.current_page_item a:after,
+.primary-nav ul li:hover a:after {
+  width:100%;
+}
+
+/*----------------------------------------
+ # Hero section (Title and Description)
+----------------------------------------*/
+
+#hero {
+  margin: 0 auto;
+  padding-bottom: 60px;
+  max-width: 880px;
+  background-image: url('./wp-content/themes/capstan/img/compass-rose-half.png');
+  background-position: right bottom;
+  background-repeat: no-repeat;
+}
+
+#hero h1 {
+  font-size: 5rem;
+  margin: 0 0 3rem;
+  line-height: 1.2;
+}
+
+#hero h2 {
+  font-weight: 300;
+  line-height: 1.5;
+  margin: 0 0 2rem;
+  font-size: 1.5rem;
+  color: rgba(0, 0, 0, 0.54);
+  font-family: 'Open Sans', Helvetica, Verdana, serif;
+}
+
+/*----------------------------------------
+ # Recent News
+----------------------------------------*/
+
+#news {
+  background: #f2f2f2;
+  padding: 48px 0 24px;
+}
+
+#news .section-title {
+  max-width: 880px;
+  margin: 0 auto 48px;
+  color: #464646;
+  font-size: 48px;
+  font-weight: 700;
+  font-family: Roboto, serif;
+}
+
+#news .section-title:before {
+  content: '';
+  display: block;
+  width: 30px;
+  border-top-width: 3px;
+  border-top: 3px solid rgb(43, 45, 50);
+}
+
+.latest-news .post {
+  margin-bottom: 48px;
+}
+
+.latest-news .has-post-thumbnail .post-thumbnail {
+  width: 30%;
+  float: left;
+}
+
+.latest-news .has-post-thumbnail .post-thumbnail img {
+  max-width: 100%;
+  height: auto;
+}
+
+.latest-news .has-post-thumbnail .entry-content {
+  width: 70%;
+  float: left;
+  padding: 0 1rem;
+}
+
+.latest-news .post .entry-title {
+  margin: 0;
+}
+
+.latest-news .post .entry-title a {
+  display: block;
+  font-size: 30px;
+  line-height: 35px;
+  font-family: Roboto, serif;
+  font-weight: 400;
+  text-decoration: none;
+  color: rgba(0, 0, 0, 0.87);
+}
+
+/*----------------------------------------
+ # Single Post & Page (Critical Part)
+----------------------------------------*/
+.single article.container,
+.page article.container {
+  padding: 0 15px;
+}
+
+@media screen and (min-width: 768px) {
+  .single .entry-header:before,
+  .page .entry-header:before {
+    content: '';
+    display: block;
+    width: 30px;
+    border-top: 3px solid #000;
+  }
+}
+
+.single .entry-title,
+.page .entry-title {
+  display: block;
+  font-size: 48px;
+  line-height: 55px;
+  font-weight: 400;
+  padding-top: 30px;
+  padding-bottom: 45px;
+  margin: 0;
 }

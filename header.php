@@ -15,17 +15,22 @@
       <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
     <![endif]-->
   <?php wp_head(); ?>
+  <style id="above-the-fold" type="text/css" media="screen">
+  <?php readfile( get_stylesheet_directory_uri() . '/css/atv.css'); ?>
+  </style>
   </head>
   <body <?php body_class(); ?> >
 
+    <div id="banner"></div>
+
     <header id="site-header" class="container">
-    	<nav role="navigation" class="primary-nav">
+    	<nav role="navigation" class="primary-nav clearfix">
     		<?php
           $args = array(
-            'menu_class' => null,
-            'menu_id' => null,
             'container' => false,
+            'menu_class' => 'clearfix',
             'theme_location' => 'primary',
+            'items_wrap' => '<ul id="%1$s" class="%2$s"><div class="right">%3$s</div></ul>'
           );
           wp_nav_menu( $args );
         ?>

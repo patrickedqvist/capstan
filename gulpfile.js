@@ -8,7 +8,7 @@ var gulp = require('gulp'),
 
 // Styles
 gulp.task('styles', function() {
-  return sass('css/sass/app.scss')
+  return sass('css/sass/*.scss')
     .pipe(autoprefixer('last 2 version'))
     .pipe(cssnano())
     .pipe(gulp.dest('./css'))
