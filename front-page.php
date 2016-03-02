@@ -1,10 +1,5 @@
 <?php get_header(); ?>
 
-<div id="hero">
-  <h1><?php bloginfo('name'); ?></h1>
-  <h2><?php bloginfo('description'); ?></h2>
-</div>
-
 <section id="news" role="content">
   <h3 class="section-title"><?php _e('Nyheter', 'capstan'); ?></h3>
 

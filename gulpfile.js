@@ -10,7 +10,7 @@ var gulp = require('gulp'),
 gulp.task('styles', function() {
   return sass('css/sass/*.scss')
     .pipe(autoprefixer('last 2 version'))
-    .pipe(cssnano())
+    .pipe(cssnano({ zindex:false }))
     .pipe(gulp.dest('./css'))
     .on('error', sass.logError)
 });

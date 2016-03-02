@@ -1,0 +1,118 @@
+#nav-trigger {
+  position: absolute;
+  right: 20px;
+  top: 20px;
+  height: 45px;
+  width: 50px;
+  background-color: #75b0cf;
+  z-index: 10;
+}
+#nav-trigger .menu-text {
+  color: #fff;
+  text-transform: uppercase;
+  font-weight: 400;
+  /* hide the text on small devices */
+  display: none;
+}
+#nav-trigger .menu-icon {
+  /* this span is the central line of the menu icon */
+  display: inline-block;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  bottom: auto;
+  right: auto;
+  -webkit-transform: translateX(-50%) translateY(-50%);
+  -moz-transform: translateX(-50%) translateY(-50%);
+  -ms-transform: translateX(-50%) translateY(-50%);
+  -o-transform: translateX(-50%) translateY(-50%);
+  transform: translateX(-50%) translateY(-50%);
+  width: 18px;
+  height: 2px;
+  background-color: #fff;
+  -webkit-transition: background-color 0.3s;
+  -moz-transition: background-color 0.3s;
+  transition: background-color 0.3s;
+  /* these are the upper and lower lines in the menu icon */
+}
+#nav-trigger .menu-icon::before,
+#nav-trigger .menu-icon:after {
+  content: '';
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  background-color: #fff;
+  right: 0;
+  -webkit-transition: -webkit-transform .3s, top .3s, background-color 0s;
+  -moz-transition: -moz-transform .3s, top .3s, background-color 0s;
+  transition: transform .3s, top .3s, background-color 0s;
+}
+#nav-trigger .menu-icon::before {
+  top: -5px;
+}
+#nav-trigger .menu-icon::after {
+  top: 5px;
+}
+
+@media only screen and (min-width: 768px) {
+
+  nav.primary-nav {
+    display: block;
+  }
+
+  #nav-trigger {
+    display: none;
+  }
+
+}
+
+#touch-nav ul {
+  /* by default it's hidden - on top of the viewport */
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  background: #75b0cf;
+  z-index: 100;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+  /* this fixes the buggy scrolling on webkit browsers - mobile devices only - when overflow property is applied */
+  -webkit-overflow-scrolling: touch;
+  transform: translateY(-100%);
+  transition-property: transform;
+  transition-duration: 0.4s;
+  max-width: 100%;
+}
+#touch-nav ul li {
+  display: block;
+  text-align: center;
+}
+#touch-nav ul li a {
+  display: inline-block;
+  width: 100%;
+  color: #fff;
+  padding: 15px 0;
+  font-size: 18px;
+  font-weight: 400;
+  text-decoration: none;
+  transition: all 150ms ease-in-out;
+}
+
+#touch-nav ul li.current_page_item a,
+#touch-nav ul li a:hover {
+  background: #fff;
+  color: #75b0cf;
+}
+
+#touch-nav.is-visible ul {
+  transform: translateY(0%);
+}
+
+@media only screen and (min-width: 768px) {
+  #touch-nav ul {
+    padding: 80px 0;
+  }
+}

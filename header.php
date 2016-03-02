@@ -21,18 +21,10 @@
   </head>
   <body <?php body_class(); ?> >
 
-    <div id="banner"></div>
-
-    <header id="site-header" class="container">
-    	<nav role="navigation" class="primary-nav clearfix">
-    		<?php
-          $args = array(
-            'container' => false,
-            'menu_class' => 'clearfix',
-            'theme_location' => 'primary',
-            'items_wrap' => '<ul id="%1$s" class="%2$s"><div class="right">%3$s</div></ul>'
-          );
-          wp_nav_menu( $args );
-        ?>
-    	</nav>
-    </header>
+    <?php
+      if ( is_front_page() || is_home() ) :
+        get_template_part('template-parts/header', 'front');
+      else :
+        get_template_part('template-parts/header');
+      endif;
+    ?>
